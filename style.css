@@ -176,14 +176,6 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     transform: scale(0.98);
 }
 
-.btn-secondary {
-    background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
-
 .btn-danger {
     background-color: #dc3545;
     padding: 0.4rem 0.8rem;
