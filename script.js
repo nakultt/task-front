@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- API HELPER ---
     const api = {
-        baseUrl: 'http://localhost:3000/api',
+        baseUrl: 'https://task-manager-backend-89q1.onrender.com',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
