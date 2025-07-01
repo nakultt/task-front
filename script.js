@@ -66,6 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LOGIN/REGISTER PAGE LOGIC (login.html) ---
     if (currentPage === 'login.html') {
+        // Inject style to make username and password boxes full width
+        const style = document.createElement('style');
+        style.textContent = `
+            #login-form input[type="text"],
+            #login-form input[type="password"],
+            #register-form input[type="text"],
+            #register-form input[type="password"] {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        `;
+        document.head.appendChild(style);
+
         const loginForm = document.getElementById('login-form');
         const registerForm = document.getElementById('register-form');
         const showRegisterLink = document.getElementById('show-register');
