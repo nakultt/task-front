@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- API HELPER ---
     const api = {
-        baseUrl: 'https://task-manager-backend-89q1.onrender.com',
+        baseUrl: 'https://task-manager-backend-89q1.onrender.com/api', // Updated to include /api prefix
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         async post(endpoint, body) {
             const res = await fetch(`${this.baseUrl}${endpoint}`, {
                 method: 'POST',
-                headers: this.headers, // Updated to include Authorization header
+                headers: this.headers,
                 body: JSON.stringify(body)
             });
             return res.json();
@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     showMessage('task-message', newTask.message, 'error');
                 }
-            }
-        });
+                }
+            });
 
         // Handle task completion and deletion using event delegation
         taskList.addEventListener('click', async (e) => {
