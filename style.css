@@ -26,7 +26,7 @@ body {
     gap: 1.2rem;
 }
 .app-header h1 {
-    margin: 0 1.5rem 0 0;
+    margin: 0;
     font-size: 2rem;
     font-weight: 700;
     display: flex;
@@ -45,9 +45,8 @@ body {
 
 /* Logout button at bottom left of app container */
 .logout-bottom {
-    margin-top: 2.5rem;
+    margin-top: 0;
     margin-left: 0;
-    align-self: flex-start;
     padding: 0.4rem 1.1rem;
     font-size: 0.98rem;
     min-width: 80px;
@@ -67,10 +66,12 @@ body {
 .auth-container, .app-container {
     width: 100%;
     max-width: 600px;
-    padding: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     justify-content: flex-start;
 }
 
@@ -89,6 +90,7 @@ body {
     margin-bottom: 2rem;
     width: 100%;
     max-width: 400px; /* Adjusted for login forms */
+    margin: 0 auto;
 }
 
 .task-input-container, .task-list-container {
