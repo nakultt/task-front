@@ -14,32 +14,64 @@ body {
 .app-header {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    gap: 1.2rem;
 }
 .app-header h1 {
-    margin: 0;
+    margin: 0 1.5rem 0 0;
     font-size: 2rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 .app-header > div {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+#logout-btn {
+    margin: 0;
+    align-self: auto;
+}
+
+/* Logout button at bottom left of app container */
+.logout-bottom {
+    margin-top: 2.5rem;
+    margin-left: 0;
+    align-self: flex-start;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.98rem;
+    min-width: 80px;
+    max-width: 120px;
+}
+
+#welcome-message {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
 /* Main Containers */
 .auth-container, .app-container {
     width: 100%;
-    max-width: 500px;
-    padding: 2rem;
+    max-width: 600px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -321,4 +353,16 @@ progress,
     width: 22px;
     height: 22px;
     display: block;
+}
+
+/* After main actions: right align below white box */
+.after-main-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    align-self: flex-end;
 }
