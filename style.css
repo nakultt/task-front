@@ -126,10 +126,16 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 
 /* Add more spacing between form groups and button for better layout */
 .auth-form-wrapper form .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0rem;
 }
+
+.form-group label {
+    margin-bottom: 0.6rem;
+    display: block; /* Ensures margin-bottom works correctly */
+}
+
 .auth-form-wrapper form .btn {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 /* --- TASK FORM --- */
