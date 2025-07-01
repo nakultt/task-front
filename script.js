@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         li.innerHTML = `
                             <span class="task-text">${task.text}</span>
                             <progress value="${task.currentCount}" max="${task.totalCount}"></progress>
+                            <button class="btn btn-primary increment-btn">Increment</button>
                             <button class="btn btn-danger delete-btn">Delete</button>
                         `;
                         taskList.appendChild(li);
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     showMessage('task-message', result.message, 'error');
                 }
-            } else if (target.classList.contains('task-text') && !li.classList.contains('completed')) {
+            } else if (target.classList.contains('increment-btn') && !li.classList.contains('completed')) {
                 const updatedTask = await api.put(`/tasks/${id}/increment`, {});
                 if (updatedTask._id) {
                     fetchTasks();

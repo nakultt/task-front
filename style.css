@@ -4,7 +4,7 @@ body {
     background-color: #f0f2f5;
     margin: 0;
     display: flex;
-    justify-contentರೀಕರಣ: center;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     color: #333;
@@ -15,6 +15,10 @@ body {
     width: 100%;
     max-width: 500px;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -30,12 +34,12 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 400px; /* Adjusted for login forms */
 }
 
-h1, h2 {
-    color: #1c1c1e;
-    text-align: center;
-    margin-top: 0;
+.task-input-container, .task-list-container {
+    max-width: 600px; /* Adjusted for task containers */
 }
 
 /* Forms */
@@ -43,17 +47,7 @@ form {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #555;
+    width: 100%;
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
@@ -62,6 +56,7 @@ input[type="text"], input[type="password"], input[type="number"] {
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.2s, box-shadow 0.2s;
+    flex-grow: 1;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
@@ -87,7 +82,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     background-color: #005ecb;
 }
 
-.btn董事: active {
+.btn:active {
     transform: scale(0.98);
 }
 
@@ -109,50 +104,14 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     background-color: #c82333;
 }
 
-/* Auth Page Specifics */
-.toggle-link {
-    text-align: center;
-    margin-top: 1rem;
+.btn-primary {
+    background-color: #28a745;
+    padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
 }
 
-.toggle-link a {
-    color: #007aff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.hidden {
-    display: none;
-}
-
-/* App Header */
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.app-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-#welcome-message {
-    margin-right: 1rem;
-    color: #555;
-}
-
-/* Task Input */
-#task-form {
-    flex-direction: row;
-}
-
-#task-text {
-    flex-grow: 1;
+.btn-primary:hover {
+    background-color: #218838;
 }
 
 /* Task List */
@@ -160,6 +119,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .task-item {
@@ -181,19 +141,17 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 .task-item.completed .task-text {
     text-decoration: line-through;
     color: #888;
-    cursor: default;
 }
 
 .task-text {
     flex-grow: 1;
     margin: 0 1rem;
-    cursor: pointer;
 }
 
 /* Progress Bar */
 progress {
-    width: 100px;
-    height: 20px;
+    width: 200px;
+    height: 30px;
     margin-left: 10px;
 }
 
